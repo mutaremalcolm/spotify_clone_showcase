@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { twMerge } from 'tailwind-merge';
@@ -9,7 +11,7 @@ interface SidebarItemProps {
   href: string;
 };
 
-const SidebarItem: React.FC<SidebarItemProps> = ({
+const SidebarItem: React.FC<SidebarItemProps> = ({  
   icon: Icon,
   label,
   active,
@@ -36,6 +38,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
         )
       }
     >
+        
       <Icon size={26}/>
       <p className="truncate w-100">{label}</p>
     </Link>
